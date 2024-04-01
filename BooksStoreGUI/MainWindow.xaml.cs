@@ -40,7 +40,8 @@ namespace BooksStoreGUI
             string Country = e1.Text;
             string Phone = f.Text;
             booksStoreBL.AddNewBook(id, FName, LName, City, Country, Phone);
-           Applylist();
+            var res = booksStoreBL.GetAllBooks();
+            Shop.ItemsSource = res;
 
         }
     }
